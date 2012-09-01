@@ -12,6 +12,7 @@
                         description="COM_HELLOWORLD_HELLOWORLD_GREETING_DESC"
                         size="40"
                         class="inputbox"
+                        required="true"
                         default=""
                 />
                 <field
@@ -31,7 +32,6 @@
                         required="true"
                         size="40"
                         class="inputbox"
-                        default=""
                 />
         </fieldset>
 </form>

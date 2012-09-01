@@ -43,7 +43,7 @@ class JFormFieldModal_Team extends JFormField
 		$query = $db->getQuery(true);
 		$query->select('team_name');
 		$query->from('#__jclan_team');
-		$query->where('team_name='.(int)$this->value);
+		$query->where('team_name=\''.$this->value.'\'');
 		$db->setQuery($query);
 		if (!$title = $db->loadResult()) {
 			JError::raiseWarning(500, $db->getErrorMsg());

@@ -16,32 +16,28 @@ class jclanViewTeam extends JView
 	 */
 	public function display($tpl = null)
 	{
-		try {
 
 
-			// get the Data
-			$form = $this->get('Form');
-			$item = $this->get('Data');
 
-			$input = JFactory::getApplication()->input;
-			$input->set('hidemainmenu', true);
+		// get the Data
+		$form = $this->get('Form');
+		$item = $this->get('Item');
 
-			//$input->get('player_id',0);
-			// Check for errors.
-			if (count($errors = $this->get('Errors')))
-			{
-				JError::raiseError(500, implode('<br />', $errors));
-				return false;
-			}
-			// Assign the Data
-			$this->form = $form;
-			$this->item = $item;
-			
-			$this->addToolBar();
-			
-		} catch (Exception $e) {
-			JError::throwError($e);
+		$input = JFactory::getApplication()->input;
+		$input->set('hidemainmenu', true);
+
+		//$input->get('player_id',0);
+		// Check for errors.
+		if (count($errors = $this->get('Errors')))
+		{
+			JError::raiseError(500, implode('<br />', $errors));
+			return false;
 		}
+		// Assign the Data
+		$this->form = $form;
+		$this->item = $item;
+			
+		$this->addToolBar();
 		// Set the toolbar
 
 		// Display the template
@@ -53,8 +49,11 @@ class jclanViewTeam extends JView
 	 */
 	protected function addToolBar()
 	{
-		JToolBarHelper::title($isNew ? JText::_('COM_JCLAN_PLAYER_NEW')
-		: JText::_('COM_JCLAN_PLAYER_EDIT'));
+		$input = JFactory::getApplication()->input;
+		$input->set('hidemainmenu', true);
+		$isNew = ($this->item->team_id == null);
+		JToolBarHelper::title($isNew ? JText::_('COM_JCLAN_TEAM_NEW'.print_r($this->item))
+		: JText::_('COM_JCLAN_TEAM_EDIT'));
 		JToolBarHelper::save('team.save');
 		JToolBarHelper::cancel('team.cancel', $isNew ? 'JTOOLBAR_CANCEL'
 				: 'JTOOLBAR_CLOSE');

@@ -3,7 +3,7 @@
 defined('_JEXEC') or die('Restricted access');
 JHtml::_('behavior.tooltip');
 ?>
-<form action="<?php echo JRoute::_('index.php?option=com_jclan&layout=edit&id='.(int) $this->item->player_id); ?>"
+<form action="<?php echo JRoute::_('index.php?option=com_jclan&layout=edit&player_id='.(int) $this->item->player_id); ?>"
       method="post" name="adminForm" id="jclan-form">
         <fieldset class="adminform">
                 <legend><?php echo JText::_( 'COM_JCLAN_PLAYER_DETAILS' ); ?></legend>

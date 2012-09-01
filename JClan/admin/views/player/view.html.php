@@ -16,11 +16,10 @@ class JClanViewPlayer extends JView
 	 */
 	public function display($tpl = null)
 	{
-		try {
 
 			// get the Data
 			$form = $this->get('Form');
-			$item = $this->get('Data');
+			$item = $this->get('Item');
 
 			$input = JFactory::getApplication()->input;
 			$input->set('hidemainmenu', true);
@@ -38,9 +37,6 @@ class JClanViewPlayer extends JView
 			
 			$this->addToolBar();
 			
-		} catch (Exception $e) {
-			JError::throwError($e);
-		}
 		// Set the toolbar
 
 		// Display the template
@@ -55,8 +51,8 @@ class JClanViewPlayer extends JView
 		$input = JFactory::getApplication()->input;
 		$input->set('hidemainmenu', true);
 		$isNew = ($this->item->player_id == null);
-		JToolBarHelper::title($isNew ? JText::_('COM_JCLAN_PLAYER_NEW'.$this->item->player_id)
-		: JText::_('COM_JCLAN_PLAYER_EDIT'.$this->item->player_id));
+		JToolBarHelper::title($isNew ? JText::_('COM_JCLAN_PLAYER_NEW')
+		: JText::_('COM_JCLAN_PLAYER_EDIT'));
 		JToolBarHelper::save('player.save');
 		JToolBarHelper::cancel('player.cancel', $isNew ? 'JTOOLBAR_CANCEL'
 				: 'JTOOLBAR_CLOSE');
