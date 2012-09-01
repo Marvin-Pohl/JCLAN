@@ -4,7 +4,7 @@ defined('_JEXEC') or die('Restricted Access');
 
 jimport('joomla.database.table');
 
-class TablePlayer extends JTable {
+class JClanTablePlayer extends JTable {
 	
 	var $player_id = null;
 	var $nickname = null;

@@ -8,7 +8,7 @@ jimport('joomla.application.component.view');
 /**
  * HelloWorlds View
  */
-class jclanViewjclan_list_players extends JView
+class JClanViewPlayers extends JView
 {
         /**
          * HelloWorlds view display method
@@ -31,8 +31,10 @@ class jclanViewjclan_list_players extends JView
                 // Assign data to the view
                 $this->items = $items;
                 $this->pagination = $pagination;
-                
-                $this->addToolBar();
+                // Only set the toolbar if not modal
+                if ($this->getLayout() !== 'modal') {
+                	$this->addToolBar();
+                }
  
                 // Display the template
                 parent::display($tpl);
@@ -44,8 +46,8 @@ class jclanViewjclan_list_players extends JView
         protected function addToolBar()
         {
         	JToolBarHelper::title(JText::_('COM_JCLAN_MANAGER_PLAYERS_TOOLBAR_TITLE'));
-        	JToolBarHelper::deleteList('', 'remove_player');
-        	JToolBarHelper::editList('edit_player');
-        	JToolBarHelper::addNew('add_player');
+        	JToolBarHelper::deleteList('', 'players.delete');
+        	JToolBarHelper::editList('player.edit');
+        	JToolBarHelper::addNew('player.add');
         }
 }

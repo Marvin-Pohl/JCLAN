@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form name="request" addfieldpath="administrator/components/com_jclan/models/fields">
+        <fieldset name="request">
+                <field
+                        name="player_id"
+                        type="hidden"
+                />
+                <field
+                        name="nickname"
+                        type="text"
+                        label="COM_HELLOWORLD_HELLOWORLD_GREETING_LABEL"
+                        description="COM_HELLOWORLD_HELLOWORLD_GREETING_DESC"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                />
+                <field
+                        name="steam_id"
+                        type="text"
+                        label="COM_HELLOWORLD_HELLOWORLD_GREETING_LABEL"
+                        description="COM_HELLOWORLD_HELLOWORLD_GREETING_DESC"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                />
+                <field
+                        name="team_id"
+                        type="modal_team"
+                        label="COM_HELLOWORLD_HELLOWORLD_GREETING_LABEL"
+                        description="COM_HELLOWORLD_HELLOWORLD_GREETING_DESC"
+                        required="true"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                />
+        </fieldset>
+</form>

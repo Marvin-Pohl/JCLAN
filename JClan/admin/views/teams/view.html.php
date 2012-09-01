@@ -8,7 +8,7 @@ jimport('joomla.application.component.view');
 /**
  * HelloWorlds View
  */
-class jclanViewjclan_list_teams extends JView
+class JClanViewTeams extends JView
 {
         /**
          * HelloWorlds view display method
@@ -19,6 +19,8 @@ class jclanViewjclan_list_teams extends JView
                 // Get data from the model
                 $items = $this->get('Items');
                 $pagination = $this->get('Pagination');
+                //$pagination->total = 100;
+                //$pagination->limit = 10;
  
                 // Check for errors.
                 if (count($errors = $this->get('Errors'))) 
@@ -29,8 +31,23 @@ class jclanViewjclan_list_teams extends JView
                 // Assign data to the view
                 $this->items = $items;
                 $this->pagination = $pagination;
+                // Only set the toolbar if not modal
+                if ($this->getLayout() !== 'modal') {
+                	$this->addToolBar();
+                }
  
                 // Display the template
                 parent::display($tpl);
+        }
+        
+        /**
+         * Setting the toolbar
+         */
+        protected function addToolBar()
+        {
+        	JToolBarHelper::title(JText::_('COM_JCLAN_MANAGER_TEAMS_TOOLBAR_TITLE'));
+        	JToolBarHelper::deleteList('', 'teams.delete');
+        	JToolBarHelper::editList('team.edit');
+        	JToolBarHelper::addNew('team.add');
         }
 }
