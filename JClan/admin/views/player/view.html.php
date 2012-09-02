@@ -17,25 +17,25 @@ class JClanViewPlayer extends JView
 	public function display($tpl = null)
 	{
 
-			// get the Data
-			$form = $this->get('Form');
-			$item = $this->get('Item');
+		// get the Data
+		$form = $this->get('Form');
+		$item = $this->get('Item');
 
-			$input = JFactory::getApplication()->input;
-			$input->set('hidemainmenu', true);
+		$input = JFactory::getApplication()->input;
+		$input->set('hidemainmenu', true);
 
 
-			// Check for errors.
-			if (count($errors = $this->get('Errors')))
-			{
-				JError::raiseError(500, implode('<br />', $errors));
-				return false;
-			}
-			// Assign the Data
-			$this->form = $form;
-			$this->item = $item;
+		// Check for errors.
+		if (count($errors = $this->get('Errors')))
+		{
+			JError::raiseError(500, implode('<br />', $errors));
+			return false;
+		}
+		// Assign the Data
+		$this->form = $form;
+		$this->item = $item;
 			
-			$this->addToolBar();
+		$this->addToolBar();
 			
 		// Set the toolbar
 
@@ -50,7 +50,7 @@ class JClanViewPlayer extends JView
 	{
 		$input = JFactory::getApplication()->input;
 		$input->set('hidemainmenu', true);
-		$isNew = ($this->item->player_id == null);
+		$isNew = ($this->item->player_id == 0);
 		JToolBarHelper::title($isNew ? JText::_('COM_JCLAN_PLAYER_NEW')
 		: JText::_('COM_JCLAN_PLAYER_EDIT'));
 		JToolBarHelper::save('player.save');

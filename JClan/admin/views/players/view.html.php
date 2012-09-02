@@ -50,4 +50,5 @@ class JClanViewPlayers extends JView
         	JToolBarHelper::editList('player.edit');
         	JToolBarHelper::addNew('player.add');
         }
+        
 }

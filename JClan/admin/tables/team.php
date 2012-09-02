@@ -7,6 +7,7 @@ jimport('joomla.database.table');
 class JClanTableTeam extends JTable {
 
 	var $team_id = null;
+	var $tag = null;
 	var $team_name = null;
 	var $entry_date = null;
 	

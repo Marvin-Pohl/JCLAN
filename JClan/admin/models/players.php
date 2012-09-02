@@ -11,9 +11,10 @@ class JClanModelPlayers extends JModellist {
                 $db = JFactory::getDBO();
                 $query = $db->getQuery(true);
                 // Select some fields
-                $query->select('player_id,nickname,steam_id,team_id');
+                $query->select('p.player_id,p.nickname,p.steam_id,p.team_id,t.team_name');
                 // From the hello table
-                $query->from('#__jclan_players');
+                $query->from('#__jclan_players as p,#__jclan_team as t');
+                $query->where('p.team_id = t.team_id');
                 return $query;
 	}
 }

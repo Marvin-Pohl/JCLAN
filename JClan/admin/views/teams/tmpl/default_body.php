@@ -11,6 +11,9 @@ defined('_JEXEC') or die('Restricted Access');
                         <?php echo $item->team_id; ?>
                 </td>
                 <td>
+                        <?php echo $item->tag; ?>
+                </td>
+                <td>
                         <?php echo $item->team_name; ?>
                 </td>
                 

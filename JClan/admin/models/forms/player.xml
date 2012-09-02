@@ -8,18 +8,19 @@
                 <field
                         name="nickname"
                         type="text"
-                        label="COM_HELLOWORLD_HELLOWORLD_GREETING_LABEL"
-                        description="COM_HELLOWORLD_HELLOWORLD_GREETING_DESC"
+                        label="COM_JCLAN_NICKNAME_LABEL"
+                        description="COM_JCLAN_NICKNAME_DESC"
                         size="40"
                         class="inputbox"
                         required="true"
                         default=""
                 />
+                
                 <field
                         name="steam_id"
                         type="text"
-                        label="COM_HELLOWORLD_HELLOWORLD_GREETING_LABEL"
-                        description="COM_HELLOWORLD_HELLOWORLD_GREETING_DESC"
+                        label="COM_JCLAN_STEAM_ID_LABEL"
+                        description="COM_JCLAN_STEAM_ID_DESC"
                         size="40"
                         class="inputbox"
                         default=""
@@ -27,11 +28,18 @@
                 <field
                         name="team_id"
                         type="modal_team"
-                        label="COM_HELLOWORLD_HELLOWORLD_GREETING_LABEL"
-                        description="COM_HELLOWORLD_HELLOWORLD_GREETING_DESC"
+                        label="COM_JCLAN_PLAYER_TEAM_LABEL"
+                        description="COM_JCLAN_PLAYER_TEAM_DESC"
                         required="true"
-                        size="40"
                         class="inputbox"
+                />
+                <field
+                        name="joomla_user_id"
+                        type="user"
+                        label="COM_JCLAN_JOOMLA_USER_PLAYER_LABEL"
+                        description="COM_JCLAN_JOOMLA_USER_PLAYER_DESC"
+                        class="inputbox"
+                        default=""
                 />
         </fieldset>
 </form>

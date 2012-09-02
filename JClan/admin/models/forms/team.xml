@@ -10,7 +10,18 @@
                         type="text"
                         label="COM_JCLAN_TEAM_NAME_LABEL"
                         description="COM_JCLAN_TEAM_NAME_DESC"
+                        required="true"
                         size="40"
+                        class="inputbox"
+                        default=""
+                />
+                <field
+                        name="tag"
+                        type="text"
+                        label="COM_JCLAN_TEAM_TAG_LABEL"
+                        description="COM_JCLAN_TEAM_TAG_DESC"
+                        required="true"
+                        size="4"
                         class="inputbox"
                         default=""
                 />
@@ -19,7 +30,6 @@
                         type="calendar"
                         label="COM_JCLAN_TEAM_ENTRY_DATE_LABEL"
                         description="COM_JCLAN_TEAM_ENTRY_DATE_DESC"
-                        size="40"
                         class="inputbox"
                         default=""
                 />

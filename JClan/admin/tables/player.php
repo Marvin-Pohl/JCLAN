@@ -6,12 +6,12 @@ jimport('joomla.database.table');
 
 class JClanTablePlayer extends JTable {
 	
-	var $player_id = null;
-	var $nickname = null;
+	var $player_id = 0;
+	var $nickname = '';
 	
-	var $steam_id = null;
+	var $steam_id = '';
 	
-	var $team_id = null;
+	var $team_id = 0;
 	
 	
 	
