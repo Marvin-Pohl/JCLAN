@@ -50,7 +50,7 @@ class JClanController extends JController {
 	}
 	
 	function maps() {
-		JRequest::setVar('view','maps');
+		JRequest::setVar('view','game_maps');
 		parent::display();
 	}
 	
