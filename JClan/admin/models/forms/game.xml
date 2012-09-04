@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+
+    <fieldset name="request" >
+
+        <field
+            name="game_id"
+            type="hidden" >
+        </field>
+
+        <field
+            name="game_name"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_GAME_NAME_DESC"
+            label="COM_JCLAN_GAME_NAME_LABEL"
+            required="true"
+            size="50"
+            type="text" />
+
+        <field
+            name="image"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_GAME_TAG_DESC"
+            label="COM_JCLAN_GAME_TAG_LABEL"
+            required="true"
+            type="media" />
+
+        <field
+            name="homepage"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_GAME_HOMEPAGE_DESC"
+            label="COM_JCLAN_GAME_HOMEPAGE_LABEL"
+            size="100"
+            type="text" />
+    </fieldset>
+
+</form>
