@@ -53,6 +53,7 @@
                     <menu task="lineups" img="">LIST_LINEUPS</menu>
                     <menu task="games" img="">LIST_GAMES</menu>
                     <menu task="maps" img="">LIST_MAPS</menu>
+                    <menu task="game_modes" img="">LIST_GAME_MODES</menu>
                     <menu task="seasons" img="">LIST_SEASONS</menu>
                 </submenu>
                 <!-- Administration Main File Copy Section -->

@@ -54,6 +54,11 @@ class JClanController extends JController {
 		parent::display();
 	}
 	
+	function game_modes() {
+		JRequest::setVar('view','game_modes');
+		parent::display();
+	}
+	
 	function edit_player() {
 		JRequest::setVar('view','player');
 		JRequest::setVar('layout','edit');

@@ -34,7 +34,6 @@
             description="COM_JCLAN_GAME_MODE_DESC"
             label="COM_JCLAN_GAME_MODE_LABEL"
             required="true"
-            size="100"
             type="modal_game_mode" />
         
         <field
