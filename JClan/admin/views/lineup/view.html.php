@@ -8,7 +8,7 @@ jimport('joomla.application.component.view');
 /**
  * HelloWorld View
 */
-class jclanViewTeam extends JView
+class jclanViewLineup extends JView
 {
 	/**
 	 * display method of Hello view
@@ -51,11 +51,11 @@ class jclanViewTeam extends JView
 	{
 		$input = JFactory::getApplication()->input;
 		$input->set('hidemainmenu', true);
-		$isNew = ($this->item->team_id == null);
-		JToolBarHelper::title($isNew ? JText::_('COM_JCLAN_TEAM_NEW')
-		: JText::_('COM_JCLAN_TEAM_EDIT'));
-		JToolBarHelper::save('team.save');
-		JToolBarHelper::cancel('team.cancel', $isNew ? 'JTOOLBAR_CANCEL'
+		$isNew = ($this->item->lineup_id == null);
+		JToolBarHelper::title($isNew ? JText::_('COM_JCLAN_LINEUP_NEW')
+		: JText::_('COM_JCLAN_LINEUP_EDIT'));
+		JToolBarHelper::save('lineup.save');
+		JToolBarHelper::cancel('lineup.cancel', $isNew ? 'JTOOLBAR_CANCEL'
 				: 'JTOOLBAR_CLOSE');
 	}
 }
