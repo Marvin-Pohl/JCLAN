@@ -58,6 +58,11 @@ class JClanController extends JController {
 		JRequest::setVar('view','game_modes');
 		parent::display();
 	}
+
+	function player_lineups() {
+		JRequest::setVar('view','player_lineups');
+		parent::display();
+	}
 	
 	function edit_player() {
 		JRequest::setVar('view','player');
@@ -66,5 +71,6 @@ class JClanController extends JController {
 	
 		parent::display();
 	}
+	
 	
 }
