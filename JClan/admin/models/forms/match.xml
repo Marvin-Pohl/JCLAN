@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+
+    <fieldset name="request" >
+
+        <field
+            name="match_id"
+            type="hidden" />
+
+        <field
+            name="match_date"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_MATCH_DATE_DESC"
+            format="%Y-%m-%d %H:%M"
+            label="COM_JCLAN_MATCH_DATE_LABEL"
+            required="true"
+            type="calendar" />
+
+        <field
+            name="home_id"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_MATCH_HOME_TEAM_DESC"
+            label="COM_JCLAN_MATCH_HOME_TEAM_LABEL"
+            required="true"
+            type="modal_team" />
+
+        <field
+            name="home_line_up_id"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_MATCH_HOME_LINEUP_DESC"
+            label="COM_JCLAN_MATCH_HOME_LINEUP_LABEL"
+            required="true"
+            type="modal_lineup" />
+
+        <field
+            name="visitor_id"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_MATCH_VISITOR_TEAM_DESC"
+            label="COM_JCLAN_MATCH_VISITOR_TEAM_LABEL"
+            required="true"
+            type="modal_team" />
+
+        <field
+            name="visitor_line_up_id"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_MATCH_VISITOR_LINEUP_DESC"
+            label="COM_JCLAN_MATCH_VISITOR_LINEUP_LABEL"
+            required="true"
+            type="modal_lineup" />
+
+        <field
+            name="home_score"
+            class="inputbox"
+            default="0"
+            description="COM_JCLAN_MATCH_HOME_SCORE_DESC"
+            first="0"
+            label="COM_JCLAN_MATCH_HOME_SCORE_LABEL"
+            last="1000"
+            required="true"
+            step="1"
+            type="integer" />
+
+        <field
+            name="visitor_score"
+            class="inputbox"
+            default="0"
+            description="COM_JCLAN_MATCH_VISITOR_SCORE_DESC"
+            first="0"
+            label="COM_JCLAN_MATCH_VISITOR_SCORE_LABEL"
+            last="1000"
+            required="true"
+            step="1"
+            type="integer" />
+
+        <field
+            name="game_id"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_MATCH_GAME_DESC"
+            label="COM_JCLAN_MATCH_GAME_LABEL"
+            required="true"
+            type="modal_game" />
+
+        <field
+            name="map_id"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_MATCH_MAP_DESC"
+            label="COM_JCLAN_MATCH_MAP_LABEL"
+            required="true"
+            type="modal_game_map" />
+
+        <field
+            name="played"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_MATCH_PLAYED_DESC"
+            label="COM_JCLAN_MATCH_PLAYED_LABEL"
+            type="checkbox" />
+
+        <field
+            name="season_id"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_MATCH_SEASON_DESC"
+            label="COM_JCLAN_MATCH_SEASON_LABEL"
+            required="true"
+            type="modal_season" />
+    </fieldset>
+
+</form>

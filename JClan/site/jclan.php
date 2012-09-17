@@ -2,7 +2,7 @@
 //No direct Access
 defined('_JEXEC') or die('Restricted Access');
 
-jimport('joomla.application.component.controller')
+jimport('joomla.application.component.controller');
 
 // Get an instance of the controller prefixed by
 $controller = JController::getInstance('jclan');

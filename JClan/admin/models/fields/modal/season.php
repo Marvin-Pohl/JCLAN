@@ -63,7 +63,7 @@ class JFormFieldModal_Season extends JFormField
 		$html[] = '  <div class="blank">';
 		$html[] = '    <a class="modal" title="'.JText::_('COM_JCLAN_SELECT_SEASON').'" href="'.$link.
 		'" rel="{handler: \'iframe\', size: {x:800, y:450}}">'.
-		JText::_('COM_JCLAN_BUTTON_SELECT_GAME').'</a>';
+		JText::_('COM_JCLAN_BUTTON_SELECT_SEASON').'</a>';
 		$html[] = '  </div>';
 		$html[] = '</div>';
 

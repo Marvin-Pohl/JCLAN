@@ -7,13 +7,13 @@ jimport('joomla.form.formfield');
 /**
  * Book form field class
 */
-class JFormFieldModal_Game_Map extends JFormField
+class JFormFieldModal_position extends JFormField
 {
 	/**
 	 * field type
 	 * @var string
 	 */
-	protected $type = 'Modal_Game_Map';
+	protected $type = 'Modal_position';
 
 	/**
 	 * Method to get the field input markup
@@ -25,7 +25,7 @@ class JFormFieldModal_Game_Map extends JFormField
 
 		// Build the script
 		$script = array();
-		$script[] = '    function jSelectGame_Map_'.$this->id.'(id, title, object) {';
+		$script[] = '    function jSelectPosition_'.$this->id.'(id, title, object) {';
 		$script[] = '        document.id("'.$this->id.'_id").value = id;';
 		$script[] = '        document.id("'.$this->id.'_name").value = title;';
 		$script[] = '        SqueezeBox.close();';
@@ -36,20 +36,20 @@ class JFormFieldModal_Game_Map extends JFormField
 
 		// Setup variables for display
 		$html = array();
-		$link = 'index.php?option=com_jclan&amp;view=game_maps&amp;layout=modal'.
-				'&amp;tmpl=component&amp;function=jSelectGame_Map_'.$this->id;
+		$link = 'index.php?option=com_jclan&amp;view=positions&amp;layout=modal'.
+				'&amp;tmpl=component&amp;function=jSelectPosition_'.$this->id;
 
 		$db = JFactory::getDbo();
 		$query = $db->getQuery(true);
-		$query->select('map_name');
-		$query->from('#__jclan_game_map');
-		$query->where('game_map_id='.(int)$this->value);
+		$query->select('position_name');
+		$query->from('#__jclan_position');
+		$query->where('position_id='.(int)$this->value);
 		$db->setQuery($query);
 		if (!$title = $db->loadResult()) {
 			JError::raiseWarning(500, $db->getErrorMsg());
 		}
 		if (empty($title)) {
-			$title = JText::_('COM_JCLAN_FIELD_SELECT_GAME_MAP');
+			$title = JText::_('COM_JCLAN_FIELD_SELECT_POSITION');
 		}
 		$title = htmlspecialchars($title, ENT_QUOTES, 'UTF-8');
 
@@ -61,9 +61,9 @@ class JFormFieldModal_Game_Map extends JFormField
 		// The book select button
 		$html[] = '<div class="button2-left">';
 		$html[] = '  <div class="blank">';
-		$html[] = '    <a class="modal" title="'.JText::_('COM_JCLAN_SELECT_GAME_MAP').'" href="'.$link.
+		$html[] = '    <a class="modal" title="'.JText::_('COM_JCLAN_SELECT_POSITION').'" href="'.$link.
 		'" rel="{handler: \'iframe\', size: {x:800, y:450}}">'.
-		JText::_('COM_JCLAN_BUTTON_SELECT_GAME_MAP').'</a>';
+		JText::_('COM_JCLAN_BUTTON_SELECT_POSITION').'</a>';
 		$html[] = '  </div>';
 		$html[] = '</div>';
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+
+    <fieldset name="request" >
+
+        <field
+            name="position_id"
+            type="hidden" >
+        </field>
+
+        <field
+            name="position_name"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_POSITION_NAME_DESC"
+            label="COM_JCLAN_POSITION_NAME_LABEL"
+            required="true"
+            size="50"
+            type="text" />
+
+        <field
+            name="game_id"
+            class="inputbox"
+            required="true"
+            default=""
+            description="COM_JCLAN_GAME_DESC"
+            label="COM_JCLAN_GAME_LABEL"
+            type="modal_game" />
+
+        <field
+            name="image"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_POSITION_IMAGE_DESC"
+            label="COM_JCLAN_POSITION_POSITION_IMAGE_LABEL"
+            required="true"
+            type="media" />
+    </fieldset>
+
+</form>
