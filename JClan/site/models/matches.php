@@ -27,6 +27,7 @@ class JClanModelMatches extends JModellist {
                 $arr[] = 'map.map_name';
                 $arr[] = 'm.played';
                 $arr[] = 's.season_name';
+                $arr[] = 'map.image as map_image';
                 $query->select(implode(',', $arr));
                 // From the hello table
                 $from = array();

@@ -98,10 +98,19 @@
         <field
             name="played"
             class="inputbox"
-            default=""
             description="COM_JCLAN_MATCH_PLAYED_DESC"
             label="COM_JCLAN_MATCH_PLAYED_LABEL"
-            type="checkbox" />
+            type="radio"
+            value="1" >
+
+            <option value="0" >
+COM_JCLAN_NOT_PLAYED
+            </option>
+
+            <option value="1" >
+COM_JCLAN_PLAYED
+            </option>
+        </field>
 
         <field
             name="season_id"
