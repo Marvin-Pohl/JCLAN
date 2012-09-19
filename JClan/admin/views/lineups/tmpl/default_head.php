@@ -12,7 +12,7 @@ defined('_JEXEC') or die('Restricted Access');
 	</th>
 	<th width="5"><?php echo JText::_('COM_JCLAN_JCLAN_HEADING_LINEUP_ID'); ?>
 	</th>
-	<th width="5"><?php echo JText::_('COM_JCLAN_JCLAN_HEADING_LINEUP_NAME_TAG'); ?>
+	<th width="5"><?php echo JText::_('COM_JCLAN_JCLAN_HEADING_LINEUP_NAME'); ?>
 	</th>
 
 	<th width="5"><?php echo JText::_('COM_JCLAN_JCLAN_HEADING_TEAM_NAME'); ?>

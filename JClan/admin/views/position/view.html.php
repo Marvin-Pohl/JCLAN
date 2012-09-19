@@ -52,8 +52,8 @@ class jclanViewposition extends JView
 		$input = JFactory::getApplication()->input;
 		$input->set('hidemainmenu', true);
 		$isNew = ($this->item->position_id == null);
-		JToolBarHelper::title($isNew ? JText::_('COM_JCLAN_position_NEW')
-		: JText::_('COM_JCLAN_position_EDIT'));
+		JToolBarHelper::title($isNew ? JText::_('COM_JCLAN_POSITION_NEW')
+		: JText::_('COM_JCLAN_POSITION_EDIT'));
 		JToolBarHelper::save('position.save');
 		JToolBarHelper::cancel('position.cancel', $isNew ? 'JTOOLBAR_CANCEL'
 				: 'JTOOLBAR_CLOSE');

@@ -31,8 +31,8 @@
             name="game_mode_id"
             class="inputbox"
             default=""
-            description="COM_JCLAN_GAME_MODE_DESC"
-            label="COM_JCLAN_GAME_MODE_LABEL"
+            description="COM_JCLAN_GAME_MAP_GAME_MODE_DESC"
+            label="COM_JCLAN_GAME_MAP_GAME_MODE_LABEL"
             required="true"
             type="modal_game_mode" />
         

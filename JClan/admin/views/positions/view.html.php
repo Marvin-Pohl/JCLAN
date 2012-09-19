@@ -40,7 +40,7 @@ class JClanViewpositions extends JView
          */
         protected function addToolBar()
         {
-        	JToolBarHelper::title(JText::_('COM_JCLAN_MANAGER_positionS_TOOLBAR_TITLE'));
+        	JToolBarHelper::title(JText::_('COM_JCLAN_MANAGER_POSITIONS_TOOLBAR_TITLE'));
         	JToolBarHelper::deleteList('', 'positions.delete');
         	JToolBarHelper::editList('position.edit');
         	JToolBarHelper::addNew('position.add');
