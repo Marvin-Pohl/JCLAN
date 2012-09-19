@@ -3,6 +3,7 @@
 defined('_JEXEC') or die('Restricted Access');
 $document =& JFactory::getDocument();
 $document->addStyleSheet("/components/com_jclan/css/matches.css",'text/css');
+
 foreach($this->items as $i => $item): ?>
 <?php 
 if ($item->home_score == $item->visitor_score || !$item->played )
@@ -23,7 +24,6 @@ elseif ($item->home_score < $item->visitor_score)
 
 else
 {
-
 	$item->home_score_appendix = 'winner';
 	$item->visitor_score_appendix = 'loser';
 	$item->home_score = (int)$item->home_score;
@@ -33,7 +33,7 @@ else
 	class="match"
 >
 
-	<div class="block">
+	<div class="teams">
 		<div class="team third">
 			<?php echo $item->home_team_name; ?>
 		</div>
@@ -45,7 +45,7 @@ else
 		</div>
 	</div>
 	<!-- SCORE -->
-	<div class="block">
+	<div class="scores">
 		<div class="third">&nbsp;</div>
 		<div class="score_main third">
 			<span class="score <?php echo $item->home_score_appendix;?>"><?php echo $item->home_score;?>
@@ -57,8 +57,23 @@ else
 	</div>
 	<!-- End Score -->
 	<!-- Map -->
-	<div>
-		<div class="third">&nbsp;</div>
+	<div class="maps">
+		<div class="third">
+			<table class="player_lineup">
+				<tbody>
+					<?php foreach ($this->home_lineups[$item->match_id] as $j => $player_lineup):?>
+
+					<tr>
+						<td><?php echo JHtml::image($player_lineup->image, $player_lineup->position_name);?>
+						</td>
+						<td><?php echo '['.$item->home_team_tag.'] '.$player_lineup->nickname;?>
+						</td>
+					</tr>
+
+					<?php endforeach;?>
+				</tbody>
+			</table>
+		</div>
 		<div class="third">
 			<div>
 				<?php 
@@ -69,9 +84,25 @@ else
 				<?php echo JTEXT::_('COM_JCLAN_VIEW_MATCHES_MAP_DESC'). ' '. $item->map_name;?>
 			</div>
 		</div>
-		<div class="third">&nbsp;</div>
+		<div class="third">
+			<table class="player_lineup">
+				<tbody>
+					<?php foreach ($this->visitor_lineups[$item->match_id] as $j => $player_lineup):?>
+					<tr>
+						<td><?php echo JHtml::image($player_lineup->image, $player_lineup->position_name);?>
+						</td>
+						<td><?php echo '['.$item->visitor_team_tag.'] '.$player_lineup->nickname;?>
+						</td>
+					</tr>
+
+					<?php endforeach;?>
+				</tbody>
+			</table>
+		</div>
 	</div>
 	<!-- End Map -->
+
+
 	<div style="clear: both;">&nbsp;</div>
 </div>
 <!-- <tr class="row<?php echo $i % 2; ?>">

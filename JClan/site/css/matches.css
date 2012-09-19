@@ -22,9 +22,15 @@ img.center {
 	width: 33%;
 }
 
-.block {
+.block, .teams, .maps, .lineups {
 	float: left;
 	width: 100%;
+}
+
+.player_lineup{
+	width:70%;
+	margin:auto;
+	text-align: center;
 }
 
 div.team {
