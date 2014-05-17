@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+        <fieldset name="request">
+                <field
+                        name="player_lineup_id"
+                        type="hidden"
+                />
+                <field
+                        name="player_id"
+                        type="modal_player"
+                        label="COM_JCLAN_PLAYER_LINEUP_PLAYER_LABEL"
+                        description="COM_JCLAN_PLAYER_LINEUP_PLAYER_DESC"
+                        class="inputbox"
+                        default=""
+                />
+                <field
+                        name="lineup_id"
+                        type="modal_lineup"
+                        label="COM_JCLAN_PLAYER_LINEUP_ID_LABEL"
+                        description="COM_JCLAN_PLAYER_LINEUP_ID_DESC"
+                        required="true"
+                        class="inputbox"
+                        default=""
+                />
+                <field
+                        name="position_id"
+                        type="modal_position"
+                        label="COM_JCLAN_PLAYER_LINEUP_POSITION_LABEL"
+                        description="COM_JCLAN_PLAYER_LINEUP_POSITION_DESC"
+                        required="true"
+                        class="inputbox"
+                        default=""
+                />
+                
+        </fieldset>
+</form>

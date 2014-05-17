@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form name="request" addfieldpath="administrator/components/com_jclan/models/fields">
+        <fieldset name="request">
+                <field
+                        name="player_id"
+                        type="hidden"
+                />
+                <field
+                        name="nickname"
+                        type="text"
+                        label="COM_JCLAN_NICKNAME_LABEL"
+                        description="COM_JCLAN_NICKNAME_DESC"
+                        size="40"
+                        class="inputbox"
+                        required="true"
+                        default=""
+                />
+                
+                <field
+                        name="steam_id"
+                        type="text"
+                        label="COM_JCLAN_STEAM_ID_LABEL"
+                        description="COM_JCLAN_STEAM_ID_DESC"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                />
+                <field
+                        name="team_id"
+                        type="modal_team"
+                        label="COM_JCLAN_PLAYER_TEAM_LABEL"
+                        description="COM_JCLAN_PLAYER_TEAM_DESC"
+                        required="true"
+                        class="inputbox"
+                />
+                <field
+                        name="joomla_user_id"
+                        type="user"
+                        label="COM_JCLAN_JOOMLA_USER_PLAYER_LABEL"
+                        description="COM_JCLAN_JOOMLA_USER_PLAYER_DESC"
+                        class="inputbox"
+                        default=""
+                />
+        </fieldset>
+</form>

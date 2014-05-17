@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+
+    <fieldset name="request" >
+
+        <field
+            name="game_map_id"
+            type="hidden" >
+        </field>
+
+        <field
+            name="map_name"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_GAME_MAP_NAME_DESC"
+            label="COM_JCLAN_GAME_MAP_NAME_LABEL"
+            required="true"
+            size="50"
+            type="text" />
+
+        <field
+            name="game_id"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_GAME_MAP_GAME_ID_DESC"
+            label="COM_JCLAN_GAME_MAP_GAME_ID_LABEL"
+            required="true"
+            type="modal_game" />
+
+        <field
+            name="game_mode_id"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_GAME_MAP_GAME_MODE_DESC"
+            label="COM_JCLAN_GAME_MAP_GAME_MODE_LABEL"
+            required="true"
+            type="modal_game_mode" />
+        
+        <field
+            name="image"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_GAME_MAP_IMAGE_DESC"
+            label="COM_JCLAN_GAME_MAP_IMAGE_LABEL"
+            type="media" />
+
+        
+    </fieldset>
+
+</form>

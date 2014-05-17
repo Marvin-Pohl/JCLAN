@@ -10,7 +10,7 @@
         <copyright>--</copyright>
         <license>---</license>
         <!--  The version string is recorded in the components table -->
-        <version>0.0.5</version>
+        <version>0.1.2</version>
         <!-- The description is optional and defaults to the name -->
         <description>Tool for a Clan Website</description>
  
@@ -41,19 +41,28 @@
                 <filename>controller.php</filename>
                 <folder>views</folder>
                 <folder>models</folder>
+                <folder>css</folder>
+                <folder>language</folder>
         </files>
+        <languages folder="site">
+                        <language tag="en-GB">language/en-GB/en-GB.com_jclan.ini</language>
+                        <language tag="en-GB">language/en-GB/en-GB.com_jclan.sys.ini</language>
+        </languages>
  
         <administration>
                 <!-- Administration Menu Section -->
                 <menu>JClan</menu>
                 <submenu>
-                    <menu task="list_teams" img="">LIST_TEAMS</menu>
-                    <menu task="list_players" img="">LIST_PLAYERS</menu>
-                    <menu task="list_matches" img="">LIST_MATCHES</menu>
-                    <menu task="list_lineups" img="">LIST_LINEUPS</menu>
-                    <menu task="list_games" img="">LIST_GAMES</menu>
-                    <menu task="list_maps" img="">LIST_MAPS</menu>
-                    <menu task="list_seasons" img="">LIST_SEASONS</menu>
+                    <menu task="teams" img="">LIST_TEAMS</menu>
+                    <menu task="players" img="">LIST_PLAYERS</menu>
+                    <menu task="matches" img="">LIST_MATCHES</menu>
+                    <menu task="lineups" img="">LIST_LINEUPS</menu>
+                    <menu task="player_lineups" img="">LIST_PLAYER_LINEUPS</menu>
+                    <menu task="games" img="">LIST_GAMES</menu>
+                    <menu task="positions" img="">LIST_POSITIONS</menu>
+                    <menu task="maps" img="">LIST_MAPS</menu>
+                    <menu task="game_modes" img="">LIST_GAME_MODES</menu>
+                    <menu task="seasons" img="">LIST_SEASONS</menu>
                 </submenu>
                 <!-- Administration Main File Copy Section -->
                 <!-- Note the folder attribute: This attribute describes the folder

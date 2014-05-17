@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+
+    <fieldset name="request" >
+
+        <field
+            name="game_mode_id"
+            type="hidden" >
+        </field>
+
+        <field
+            name="game_mode_name"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_GAME_MODE_NAME_DESC"
+            label="COM_JCLAN_GAME_MODE_NAME_LABEL"
+            required="true"
+            size="50"
+            type="text" />
+
+        <field
+            name="game_mode_short_name"
+            class="inputbox"
+            default=""
+            description="COM_JCLAN_GAME_MAP_GAME_ID_DESC"
+            label="COM_JCLAN_GAME_MAP_GAME_ID_LABEL"
+            required="true"
+            size="4"
+            type="text" />
+
+        
+    </fieldset>
+
+</form>
